@@ -9,6 +9,25 @@
 </div>
 <!-- projectInfo end -->
 
-## 简单开始
+## 快速启动
 
-### 
+```shell
+cd ~
+mkdir -p Amiya-Bot/log
+mkdir -p Amiya-Bot/database
+```
+拉取镜像
+
+```shell
+docker pull rhwong/amiya-bot
+```
+### 容器创建
+```shell
+docker run -it --name="amiya" -m 1024M \
+-p 0.0.0.0:18080:8080 \
+-v "$(pwd)"/Amiya-Bot/log:/workspace/Amiya-Bot/log \
+-v "$(pwd)"/Amiya-Bot/database:/workspace/Amiya-Bot/database  \
+--restart=always rhwong/amiya-bot
+```
+
+

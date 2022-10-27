@@ -39,11 +39,9 @@ StartAmiya()
         wget -N --no-check-certificate "https://ghproxy.com/https://raw.githubusercontent.com/AmiyaBot/Amiya-Bot/V6-master/requirements.txt"
         pip install --upgrade pip -r requirements.txt -i https://mirrors.cloud.tencent.com/pypi/simple & waiting
     fi
-# 升级依赖
-
-
 # 启动Amiya
-cd /workspace/AmiyaBot && nohup python3 amiya.py >/dev/null 2>&1 &
+echo -e "${Info} 依赖安装完成，开始启动Amiya" 
+cd /workspace/Amiya-Bot && nohup python3 amiya.py >/dev/null 2>&1 &
 # 检测是否启动成功
 waiting
 ps -ef | grep amiya.py | grep -v grep

@@ -10,9 +10,9 @@ RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN apt-get install -y wget
 RUN apt-get install -y git
-# 安装AmiyaBot框架及运行环境
+# 安装Amiya-Bot框架及运行环境
 RUN git clone https://github.com/AmiyaBot/Amiya-Bot.git
-RUN pip install -r /workspace/AmiyaBot/requirements.txt
+RUN pip install -r /workspace/Amiya-Bot/requirements.txt -i https://mirrors.cloud.tencent.com/pypi/simple
 # 下载运行脚本
 RUN wget https://raw.githubusercontent.com/rhwong/Amiya-Bot-Docker/main/bat/start.sh
 # 修复时区

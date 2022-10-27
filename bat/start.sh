@@ -24,7 +24,7 @@ Tip="${Green_font_prefix}[注意]${Font_color_suffix}"
         echo -e "${Info} 连接Github，使用Github下载" 
         wget -N --no-check-certificate "https://raw.githubusercontent.com/AmiyaBot/Amiya-Bot/V6-master/requirements.txt"
     fi
-# 安装依赖
+# 升级依赖
 pip install --upgrade pip -r requirements.txt
 
 # 启动Amiya

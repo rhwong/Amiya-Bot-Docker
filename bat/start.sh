@@ -41,7 +41,7 @@ StartAmiya()
     fi
 # 启动Amiya
 echo -e "${Info} 依赖安装完成，开始启动Amiya" 
-cd /workspace/Amiya-Bot && nohup python3 amiya.py >/dev/null 2>&1 &
+cd /workspace/Amiya-Bot && nohup python amiya.py >/dev/null 2>&1 &
 # 检测是否启动成功
 waiting
 ps -ef | grep amiya.py | grep -v grep

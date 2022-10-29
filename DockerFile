@@ -16,7 +16,6 @@ RUN pip install -r /workspace/Amiya-Bot/requirements.txt -i https://mirrors.clou
 # 下载运行脚本
 RUN wget https://raw.githubusercontent.com/rhwong/Amiya-Bot-Docker/main/bat/start.sh
 # 修复时区
-RUN wget -P /usr/share/zoneinfo/Asia https://github.com/rhwong/Amiya-Bot-Docker/raw/main/timezone/Shanghai -N
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # 给予权限
 RUN chmod -R 766 /workspace
